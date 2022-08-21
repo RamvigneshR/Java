@@ -64,7 +64,7 @@ public class todolist {
         Scanner in = new Scanner(System.in);
         String item = in.nextLine();
         list.add(item);
-        showlist();
+        System.out.println("Added Successfully!");
     }
     public static void removeItems(){
         System.out.println("Remove Item");
@@ -72,13 +72,15 @@ public class todolist {
         Scanner in = new Scanner(System.in);
         System.out.println("What you want to remove : ");
         int removenum = in.nextInt();
-        if(removenum<0 || removenum>list.size())
+        if(removenum-1<0 || removenum>list.size())
         {
             System.out.println("No number found to remove!!");
         }
         else
         {
             list.remove(removenum-1);
+            System.out.println("Removed Successfully!");
+
         }
         System.out.println("----------------");
         showlist();
